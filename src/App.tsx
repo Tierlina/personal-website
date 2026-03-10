@@ -1,48 +1,35 @@
 import { useEffect, useState } from 'react'
 
+import { Skills } from './Skills'
+import {Projects} from './Projects'
 import { UserButton } from './UserButton'
-import {MantineProvider, createTheme} from '@mantine/core'
+import { MantineProvider, createTheme } from '@mantine/core'
 import type { MantineColorsTuple } from '@mantine/core'
-import { Info } from './Info'
-import {DoubleHeader} from './DoubleHeader'
+import { About } from './About'
+import { DoubleHeader } from './DoubleHeader'
 import SmallHeaderLayout from './SmallHeaderLayout'
 import useWindowWidth from './UseWindowWidth'
 
-const myColors : MantineColorsTuple = [
-  '#F5F5ED',
-  '#CAEEDB',
-  '#80e2ae',
-  '#F3CFE0',
-  '#FF97C8',
-  '#C8C8F0',
-  '#9797FF',
-  '#525049',
-  '#F5F5ED',
-  '#CAEEDB',
-];
-
-const myTheme = createTheme({
-  colors: {
-    myColor: myColors,
-  },
-  primaryColor: 'myColor',
-});
 
 
 function App() {
   const windowWidth = useWindowWidth();
-  const isSmallScreen = windowWidth < 768; 
+  const isSmallScreen = windowWidth < 768;
 
   return (
     <MantineProvider >
-      <div className="bg-beige">
-            <div className=" min-h-screen">
-      {isSmallScreen ? <SmallHeaderLayout /> : <DoubleHeader />}  
-      <div className="flex items-center justify-center h-[90vh]">
-        <UserButton />
-      </div>
-      <Info/>
-    </div>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <div className="bg-beige w-screen">
+        <div className=" min-h-screen">
+          {isSmallScreen ? <SmallHeaderLayout /> : <DoubleHeader />}
+          <div className="flex items-center justify-center h-[90vh]">
+            <UserButton />
+          </div>
+
+        </div>
+        <About />
+        <Skills />
+        <Projects />
       </div>
 
     </MantineProvider>

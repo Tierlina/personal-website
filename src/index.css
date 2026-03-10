@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Nuita', sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -20,6 +20,8 @@
   --color-softblack: oklch(0.2472 0.0116 93.73);
   --color-lavender: oklch(0.8458 0.0555 285.15);
   --color-dark-lavender: oklch(0.7206 0.1492 281.99);
+  --color-green: oklch(0.9181 0.0455 162.4);
+  --color-dark-green: oklch(0.8385 0.1194 159.17);
 }
 
 a {

@@ -33,7 +33,7 @@ export default function SmallHeaderLayout() {
                 </button>
 
                 {open && (
-                    <header className="flex flex-col items-center">
+                    <header className="flex items-center bg-beige border-t-0 border-5 rounded">
                         {mainItems}
                     </header>
                 )}
