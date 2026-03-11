@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 
 import { Skills } from './Skills'
 import {Projects} from './Projects'
+import {Contact} from './Contact'
 import { UserButton } from './UserButton'
 import { MantineProvider, createTheme } from '@mantine/core'
 import type { MantineColorsTuple } from '@mantine/core'
@@ -30,6 +31,7 @@ function App() {
         <About />
         <Skills />
         <Projects />
+        <Contact />
       </div>
 
     </MantineProvider>

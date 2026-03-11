@@ -22,6 +22,8 @@
   --color-dark-lavender: oklch(0.7206 0.1492 281.99);
   --color-green: oklch(0.9181 0.0455 162.4);
   --color-dark-green: oklch(0.8385 0.1194 159.17);
+  --color-pink: oklch(0.8898 0.0459 347.94);
+  --color-dark-pink: oklch(0.7162 0.1529 350.95);
 }
 
 a {
