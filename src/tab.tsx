@@ -6,7 +6,7 @@ interface TabProps {
 }
 
 
-const Tab = ({ description, color }: TabProps) => {
+export function Tab ({ description, color }: TabProps) {
   return (
     <div>
 
@@ -21,4 +21,3 @@ const Tab = ({ description, color }: TabProps) => {
   );
 };
 
-export default Tab;
