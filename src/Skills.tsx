@@ -1,6 +1,6 @@
 import Tab from './Tab'
 import SkillsCard from './SkillsCard'
-import { FaRegEye, FaGitAlt, FaReact, FaJava, FaPython, FaHtml5 } from "react-icons/fa"
+import { FaGitAlt, FaReact, FaJava, FaPython, FaHtml5 } from "react-icons/fa"
 import { SiFigma, SiVite, SiKotlin, SiTypescript, SiSplunk } from "react-icons/si"
 import { motion } from 'framer-motion';
 

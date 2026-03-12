@@ -1,11 +1,8 @@
-import { useEffect, useState } from 'react'
-
 import { Skills } from './Skills'
 import {Projects} from './Projects'
 import {Contact} from './Contact'
 import { UserButton } from './UserButton'
-import { MantineProvider, createTheme } from '@mantine/core'
-import type { MantineColorsTuple } from '@mantine/core'
+import { MantineProvider} from '@mantine/core'
 import { About } from './About'
 import { DoubleHeader } from './DoubleHeader'
 import SmallHeaderLayout from './SmallHeaderLayout'

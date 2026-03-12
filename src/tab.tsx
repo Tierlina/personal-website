@@ -1,4 +1,3 @@
-import { Container } from "@mantine/core";
 
 interface TabProps {
   description: string;

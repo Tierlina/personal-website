@@ -1,4 +1,3 @@
-import { Container, Divider, Group, Text } from '@mantine/core';
 import './index.css';
 import useTypeWriter from './useTypeWriter';
 

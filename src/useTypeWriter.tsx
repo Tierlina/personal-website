@@ -1,9 +1,5 @@
 import {useState, useEffect} from 'react';
 
-interface TypeWriterOptions {
-  speed?: number; // typing speed in milliseconds
-  text: string;
-}
 
 const useTypeWriter = (text: string, speed: number = 100) => {
     const [displayedText, setDisplayedText] = useState('');

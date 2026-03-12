@@ -1,5 +1,5 @@
 import React, { useEffect,  useState } from 'react';
-import { Anchor, Box, Burger, Group } from '@mantine/core';
+import {Burger, Group } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import { motion } from 'framer-motion';
 import Sticky from 'react-stickynode';
