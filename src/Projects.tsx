@@ -1,5 +1,5 @@
 import { ProjectsCard } from './ProjectsCard';
-import Tab from './Tab'
+import {Tab} from './Tab'
 import farmingImg from './assets/AotearoaFarming.png'
 import ChipetteImg from './assets/chipettesChallenge.png'
 

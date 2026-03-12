@@ -6,7 +6,7 @@ interface TabProps {
 }
 
 
-export default function Tab ({ description, color }: TabProps) {
+export function Tab ({ description, color }: TabProps) {
   return (
     <div>
 

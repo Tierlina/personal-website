@@ -1,5 +1,5 @@
 import { Container } from '@mantine/core';
-import Tab from './Tab';
+import {Tab} from './Tab';
 
 export function About() {
   return (
