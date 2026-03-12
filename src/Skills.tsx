@@ -1,4 +1,4 @@
-import {Tab} from './Tab'
+// import {Tab} from './Tab'
 import SkillsCard from './SkillsCard'
 import { FaGitAlt, FaReact, FaJava, FaPython, FaHtml5 } from "react-icons/fa"
 import { SiFigma, SiVite, SiKotlin, SiTypescript, SiSplunk } from "react-icons/si"
@@ -34,7 +34,7 @@ export function Skills() {
   return (
     <section id="skills">
       <div className=" bg-beige">
-        <Tab description="Skills" color="bg-beige" />
+        {/* <Tab description="Skills" color="bg-beige" /> */}
 
         <div className="flex flex-col mt-8 space-y-10 mb-[10vw]">
           {skillCategories.map((category) => (

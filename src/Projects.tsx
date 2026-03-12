@@ -1,5 +1,5 @@
 import { ProjectsCard } from './ProjectsCard';
-import {Tab} from './Tab'
+// import {Tab} from './Tab'
 import farmingImg from './assets/AotearoaFarming.png'
 import ChipetteImg from './assets/chipettesChallenge.png'
 
@@ -22,7 +22,7 @@ const projectList = [
 export function Projects() {
     return (
         <div className='bg-lavender pb-20'>
-            <Tab description="Projects" color="bg-lavender" />
+            {/* <Tab description="Projects" color="bg-lavender" /> */}
             <div className='flex flex-col items-center justify-center'>
                 {projectList.map((project, index) => (
                     <ProjectsCard key={index}{...project}
