@@ -35,7 +35,15 @@ export function Skills() {
     <section id="skills">
       <div className=" bg-beige">
         {/* <Tab description="Skills" color="bg-beige" /> */}
+    <div>
 
+      <hr className="border-3"></hr>
+      <h2
+        className={` relative w-[120px] bottom-[37px] sm:min-w-[180px] sm:bottom-[41px]  md:min-w-[208px] md:bottom-[53px] px-4 py-1 bg-beige rounded-t-lg ml-[5vw] w-[40vw] border-[5px] border-softblack border-b-0 sm:text-xl md:text-4xl font-bold text-center`}
+      >
+        Skills
+      </h2>
+    </div>
         <div className="flex flex-col mt-8 space-y-10 mb-[10vw]">
           {skillCategories.map((category) => (
             <div key={category.title}>
