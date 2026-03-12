@@ -17,7 +17,6 @@ export default function Tab ({ description, color }: TabProps) {
         {description}
       </h2>
     </div>
-
-  );
-};
+  )
+}
 
