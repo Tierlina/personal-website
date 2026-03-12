@@ -1,15 +1,15 @@
-import React, { useEffect, useRef, useState } from 'react';
-import { Anchor, Box, Burger, Container, Group } from '@mantine/core';
+import React, { useEffect,  useState } from 'react';
+import { Anchor, Box, Burger, Group } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import { motion } from 'framer-motion';
 import Sticky from 'react-stickynode';
 
 const mainLinks = [
-  { link: '/', label: 'Intro' },
+  { link: '#intro', label: 'Intro' },
   { link: '#about', label: 'About' },
   { link: '#skills', label: 'Skills' },
-  { link: '#', label: 'Projects' },
-  { link: '#', label: 'Contact' },
+  { link: '#projects', label: 'Projects' },
+  { link: '#contact', label: 'Contact' },
 ];
 
 const extraLinks = [
@@ -23,7 +23,29 @@ export function DoubleHeader() {
   // track whether page is scrolled to change header background via Tailwind classes
   const [scrolled, setScrolled] = useState(false);
 
+useEffect(() => {
+  const handleScroll = () => {
+    const scrollPosition = window.scrollY + 180; // offset for header height
 
+    mainLinks.forEach((item, index) => {
+      const section = document.querySelector(item.link);
+
+      if (section) {
+        const top = (section as HTMLElement).offsetTop;
+        const height = (section as HTMLElement).offsetHeight;
+
+        if (scrollPosition >= top && scrollPosition < top + height) {
+          setActive(index);
+        }
+      }
+    });
+  };
+
+  window.addEventListener("scroll", handleScroll);
+  handleScroll();
+
+  return () => window.removeEventListener("scroll", handleScroll);
+}, []);
 
   useEffect(() => {
     const changeColor = () => setScrolled(window.scrollY >= 80);
@@ -37,9 +59,9 @@ export function DoubleHeader() {
 
   const mainItems = mainLinks.map((item, index) => {
     const isActive = index === active;
-    const base = 'relative inline-block px-3 py-2 rounded color-softblack transition-colors duration-150 focus:outline-none';
+    const base = 'relative text-xl inline-block px-3 py-2 rounded color-softblack transition-colors duration-150 focus:outline-none';
     const hover = ' rounded-xl transition-all duration-300 ease-in-out';
-    const activeCls = ' border-dark-green rounded-xl';
+    const activeCls = '  rounded-xl';
     function HoverLink({ href, children }: { href: string; children: React.ReactNode }) {
       const [hovered, setHovered] = useState(false);
       return (
@@ -60,7 +82,7 @@ export function DoubleHeader() {
         >
           {children}
           <div
-            className={`border-b-4 border-dark-green rounded-xl transition-all duration-300 ease-in-out ${hovered ? 'w-full' : 'w-0'} ${isActive ? 'w-full' : ''}`}
+            className={`border-b-4 border-dark-pink rounded-xl transition-all duration-300 ease-in-out ${hovered ? 'w-full' : 'w-0'} ${isActive ? 'w-full' : ''}`}
           />
         </motion.a>
       );
