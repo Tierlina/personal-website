@@ -1,4 +1,4 @@
-import {Tab} from './Tab'
+import Tab from './Tab'
 import SkillsCard from './SkillsCard'
 import { FaGitAlt, FaReact, FaJava, FaPython, FaHtml5 } from "react-icons/fa"
 import { SiFigma, SiVite, SiKotlin, SiTypescript, SiSplunk } from "react-icons/si"
