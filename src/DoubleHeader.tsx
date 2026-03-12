@@ -14,18 +14,17 @@ const mainLinks = [
 
 const extraLinks = [
   { link: '#', label: 'Resume' },
-  { link: '#', label: 'Github' },
-  { link: '#', label: 'Linkedin' },
+  { link: 'https://github.com/Tierlina', label: 'Github' },
+  { link: 'www.linkedin.com/in/tierlina-payne', label: 'Linkedin' },
 ];
 
 export function DoubleHeader() {
 
-  // track whether page is scrolled to change header background via Tailwind classes
   const [scrolled, setScrolled] = useState(false);
 
 useEffect(() => {
   const handleScroll = () => {
-    const scrollPosition = window.scrollY + 180; // offset for header height
+    const scrollPosition = window.scrollY ;
 
     mainLinks.forEach((item, index) => {
       const section = document.querySelector(item.link);
@@ -97,45 +96,40 @@ useEffect(() => {
     );
   });
 
-  const extraItems = extraLinks.map((item, index) => {
-    const isActive = index === active;
-    const base = 'relative inline-block px-3 py-2 rounded color-softblack transition-colors duration-150 focus:outline-none';
-    const hover = ' rounded-xl transition-all duration-300 ease-in-out';
-    const activeCls = ' border-dark-green rounded-xl';
-    function HoverLink({ href, children }: { href: string; children: React.ReactNode }) {
-      const [hovered, setHovered] = useState(false);
-      return (
-        <motion.a
-          href={href}
-          onHoverStart={() => setHovered(true)}
-          onHoverEnd={() => setHovered(false)}
-          onClick={(event) => {
-            event.preventDefault();
-            setActive(index);
+const extraItems = extraLinks.map((item) => {
+  const base = 'relative inline-block px-3 py-2 rounded color-softblack transition-colors duration-150 focus:outline-none';
 
+  function NavLink({ href, children }: { href: string; children: React.ReactNode }) {
+    return (
+      <motion.a
+        href={href}
+        target="_blank" // Added for Github/Linkedin
+        rel="noopener noreferrer"
+        onClick={(event) => {
+          // Only prevent default if it's an internal hash link
+          if (item.link.startsWith('#')) {
+            event.preventDefault();
             const element = document.querySelector(item.link);
             if (element) {
               element.scrollIntoView({ behavior: "smooth" });
             }
-          }}
-          className={`${base} ${hover} ${isActive ? activeCls : 'bg-transparent'}`}
-        >
-          {children}
-          <div
-            className={`border-b-4 border-transparent rounded-xl transition-all duration-300 ease-in-out ${hovered ? 'w-full' : 'w-0'} ${isActive ? 'w-full' : ''}`}
-          />
-        </motion.a>
-      );
-    }
-
-    return (
-      <div key={item.label}>
-        <HoverLink href={item.link}>
-          {item.label}
-        </HoverLink>
-      </div>
+          }
+        }}
+        className={base}
+      >
+        {children}
+      </motion.a>
     );
-  });
+  }
+
+  return (
+    <div key={item.label}>
+      <NavLink href={item.link}>
+        {item.label}
+      </NavLink>
+    </div>
+  );
+});
 
 
 

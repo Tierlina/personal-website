@@ -6,6 +6,7 @@ export function UserButton() {
 
 
   return (
+    <section id="intro">
     <div>
       <div className='flex flex-col flex-start items-center h-[50vh] max-w-[900px] w-[90vw] rounded-lg border-5 bg-lavender'>
         <h1 className='font-bold'>Hello</h1>
@@ -16,6 +17,8 @@ export function UserButton() {
         </div>
       </div>
       <h2 className='flex items-center justify-center text-2xl pt-4'>and I am a software developer.</h2>
-    </div>
+    </div>      
+    </section>
+
   );
 }

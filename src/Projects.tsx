@@ -21,7 +21,8 @@ const projectList = [
 
 export function Projects() {
     return (
-        <div className='bg-lavender pb-20'>
+        <section id="projects">
+                    <div className='bg-lavender pb-20'>
             <Tab description="Projects" color="bg-lavender" />
             <div className='flex flex-col items-center justify-center'>
                 {projectList.map((project, index) => (
@@ -30,5 +31,7 @@ export function Projects() {
                 ))}
             </div>
         </div>
+        </section>
+
     );
 }

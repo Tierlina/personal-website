@@ -6,8 +6,8 @@ const mainLinks = [
   { link: "#", label: "Intro" },
   { link: "#about", label: "About" },
   { link: "#skills", label: "Skills" },
-  { link: "#", label: "Projects" },
-  { link: "#", label: "Contact" },
+  { link: "#projects", label: "Projects" },
+  { link: "#contact", label: "Contact" },
 ];
 
 export default function SmallHeaderLayout() {
