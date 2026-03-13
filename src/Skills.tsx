@@ -1,7 +1,8 @@
 // import {Tab} from './Tab'
 import SkillsCard from './SkillsCard'
 import { FaGitAlt, FaReact, FaJava, FaPython, FaHtml5 } from "react-icons/fa"
-import { SiFigma, SiVite, SiKotlin, SiTypescript, SiSplunk } from "react-icons/si"
+import {SiFigma, SiVite, SiKotlin, SiTypescript, SiSplunk, SiJunit5 } from "react-icons/si"
+import { TbApi } from "react-icons/tb";
 import { motion } from 'framer-motion';
 
 
@@ -21,11 +22,15 @@ const skillCategories = [
     ],
   },
   {
-    title: "Tools",
+    title: "Tools & Frameworks",
     skills: [
       { name: "Git", icon: FaGitAlt },
       { name: "Splunk", icon: SiSplunk },
       { name: "Figma", icon: SiFigma },
+      { name: "Rest", icon: TbApi},
+      { name: "JUnit", icon: SiJunit5}
+
+
     ],
   },
 ];

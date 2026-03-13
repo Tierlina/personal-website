@@ -31,11 +31,11 @@ export function Contact() {
         <section id="contact" className="flex flex-col">
             <div className='bg-beige'>
                 <Tab description="Contact" color="bg-beige" />
-                <div className="flex flex-col md:flex-row p-20 md:w-[90vw] gap-8">
-                    <h1 className="text-4xl font-bold">Let's start a conversation</h1>
+                <div className="flex flex-col items-center justify-center md:flex-row pl-[10vw] pb-[5vw] md:w-[80vw] gap-15">
+                    <h1 className="text-4xl font-bold">Let's start a conversation.</h1>
                     {info.map((item, index) => (
                         <div key={index} className="flex flex-col gap-2">
-                            <h3 className="font-bold text-lg">{item.title}</h3>
+                            <h3 className="font-bold text-xl">{item.title}</h3>
                             <div className="flex flex-col">
                                 {item.links.map((linkItem, linkIndex) => (
                                     <a
