@@ -8,7 +8,7 @@ export function About() {
       <Container className=" bg-green">
         <div className='h70'/>
         <div>
-          <Tab description="About me" color="bg-green" />
+          <Tab description="About" color="bg-green" />
         </div>
 
         <div className="flex flex-col md:flex-row  ml-[10vw] md:ml-[5vw]">
