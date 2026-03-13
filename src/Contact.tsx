@@ -25,8 +25,6 @@ const extraLinks = [
 
 export function Contact() {
     // Removed transition and hover-related classes
-    const base = 'relative inline-block px-3 py-2 rounded color-softblack focus:outline-none';
-
     return (
         <section id="contact" className="flex flex-col">
             <div className='bg-beige'>
