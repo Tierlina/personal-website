@@ -13,9 +13,9 @@ const mainLinks = [
 ];
 
 const extraLinks = [
-  { link: '#', label: 'Resume' },
+  { link: '/Tierlina_Payne_Resume.pdf', label: 'Resume' },
   { link: 'https://github.com/Tierlina', label: 'Github' },
-  { link: 'www.linkedin.com/in/tierlina-payne', label: 'Linkedin' },
+  { link: 'https://linkedin.com/in/tierlina-payne', label: 'Linkedin' },
 ];
 
 export function DoubleHeader() {

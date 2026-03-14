@@ -19,7 +19,7 @@ export function ProjectsCard({ name, image, description, techstack }: CardProps)
 <div className="flex flex-col md:pl-5 flex-1 md:max-w-[60vw] mb-8 h-full">
     <h3 className="text-2xl md:text-4xl font-bold mt-2 pb-2">{name}</h3>
 
-    <p className="text-softblack text-l text-center bg-green border-3 rounded-xl p-[5vw]">
+    <p className="text-softblack text-l text-center bg-green border-3 rounded-xl p-5">
         {description}
     </p>
 

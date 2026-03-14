@@ -6,7 +6,7 @@ const info = [
         title: "Contact Details",
         links: [
             { link: "mailto:tierlinapayne@gmail.com", label: 'tierlinapayne@gmail.com' },
-            { link: "https://linkedin.com/in/xxx", label: 'Linkedin' }
+            { link: "https://www.linkedin.com/in/tierlina-payne", label: 'Linkedin' }
         ]
     },
     {
@@ -18,7 +18,7 @@ const info = [
 ];
 
 const extraLinks = [
-    { link: '#', label: 'Resume' },
+    { link: 'Tierlina_Payne_Resume.pdf', label: 'Resume' },
     { link: 'https://github.com/Tierlina', label: 'Github' },
     { link: 'https://www.linkedin.com/in/tierlina-payne', label: 'Linkedin' },
 ];
